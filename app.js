@@ -8,13 +8,13 @@ const session = require('express-session');
 const flash = require('connect-flash');
 
 const app = express();
-
+// hi
 // Database connection
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: '4zsdpu.h.filess.io',
     user: 'root',
-    password: 'Republic_C207',
-    database: 'C237_usersdb'
+    password: 'dbf4792c49041ee63fcbd2dd5c7914dcfaadacab',
+    database: 'Regis_soldhappy'
 });
 
 db.connect((err) => {
