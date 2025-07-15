@@ -10,18 +10,13 @@ const flash = require('connect-flash');
 const app = express();
 // hi
 // Database connection
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: '4zsdpu.h.filess.io',
-    user: 'root',
+    user: 'Regis_soldhappy',
     password: 'dbf4792c49041ee63fcbd2dd5c7914dcfaadacab',
-    database: 'Regis_soldhappy'
-});
-
-db.connect((err) => {
-    if (err) {
-        throw err;
-    }
-    console.log('Connected to database');
+    database: 'Regis_soldhappy',
+    port: 3307,
+    connectionLimit: 3 // lower than 5
 });
 
 app.use(express.urlencoded({ extended: false }));
